@@ -78,12 +78,12 @@ jobs:
         uses: Azure/k8s-deploy@v1
         with:
           manifests: |
-            k8s/mongodb/deployment.yaml
-            k8s/mongodb/service.yaml
+            k8s/mongodb/deployment.yml
+            k8s/mongodb/service.yml
       - name: Deploy Web
         uses: Azure/k8s-deploy@v1
         with:
           manifests: |
-            k8s/web/deployment.yaml
-            k8s/web/service.yaml
+            k8s/web/deployment.yml
+            k8s/web/service.yml
           images: igormorse/rotten-potatos:${{ github.run_number }}
